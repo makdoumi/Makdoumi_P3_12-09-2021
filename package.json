@@ -9,15 +9,15 @@
   },
   "repository": { 
     "type": "git",
-    "url": "git+https://github.com/Korinne87/CorinneRoux_3_07122020.git"
+    "url": "git+https://github.com/makdoumi/Makdoumi_P3_12-09-2021.git"
   },
   "author": "",
   "license": "ISC",
   "browserslist": "last 4 versions",
   "bugs": {
-    "url": "https://github.com/Korinne87/CorinneRoux_3_07122020/issues"
+    "url": "https://github.com/makdoumi/Makdoumi_P3_12-09-2021/issues"
   },
-  "homepage": "https://github.com/Korinne87/CorinneRoux_3_07122020#readme",
+  "homepage": "https://makdoumi.github.io/Makdoumi_P3_12-09-2021/",
   "dependencies": {
     "sass": "1.29.0"
   }
