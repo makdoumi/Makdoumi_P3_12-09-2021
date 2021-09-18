@@ -1,0 +1,37 @@
+@import "./Utils/variables";
+@import "./Utils/fonctions";
+@import "./Utils/Mixins";
+@import "./Utils/Placeholders";
+@import "./Utils/Animations";
+@import "./Base/base";
+@import "./Base/typography";
+@import "./Components/buttons";
+@import "./Components/loadspinner";
+@import "./Layout/container";
+@import "./Layout/footer";
+@import "./Layout/form";
+@import "./Layout/header";
+@import "./Vendors/Fontawesome";
+
+
+@media  screen and (min-width: 769px) and (max-width: 991px){
+
+}
+
+@media  screen and (min-width: 992px) and (max-width: 1199px){
+    
+    .restaurant{
+    display: flex;
+    flex-direction: row;
+    }
+    .fonctionnement{
+        display: flex;
+        flex-direction: row;
+    }
+}
+@media  screen and (min-width: 1200px){
+    .restaurant{
+        display: flex;
+        flex-direction: row;
+    }
+}

@@ -1,0 +1,339 @@
+/**page accueil**/
+
+/**container localisation**/
+
+.localisation{
+    display: flex;
+    width: 100%;
+    background-color: $localcolor;
+    justify-content: center;
+    padding-bottom: 0.5em;
+    & form{
+        flex-direction: row;
+        padding-top: 0.5em;
+        text-align: center;
+     }
+     & input{
+        margin-left: 10px;
+        border: none;
+        background-color: $localcolor;
+        
+     }
+     & i {
+         display: inline-flex;
+         padding-top: 10px;
+         margin-left: 25px;
+     }
+}
+.placeholder{
+    font-weight: bold;
+    color: black;
+}
+
+
+
+/**container presentation**/
+
+.presentation{
+    background-color: $presentationcolor;
+    text-align: center;
+    font-weight: bold;
+    & p{
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 0px;
+    }
+    & h2 {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+}
+
+/**container fonctionnement**/
+.fonctionnement{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 16px;
+    margin-left: 13px;
+    @media  screen and (min-width:768px){
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    & h2 {
+        @include choice;
+        @media  screen and (min-width:768px){
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    } 
+    & span {
+        @include number;
+    }
+    & p {
+        justify-content: center;
+        font-size: 16px;
+        font-weight: bold;
+        @include borderradius;
+        margin: 16px;
+        padding: 16px;
+        cursor: pointer;
+        &:hover {
+            background-color: #f5edff;
+            & i {
+                color: $colorprimary;
+            }
+        }
+        & i {
+            padding-right: 16px;
+            color: #7e7e7e;
+            font-size: 19px;
+        }
+    }
+}
+/**container restaurants**/
+.restaurants{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 40px;
+    background-color: $presentationcolor;
+    margin-top: 30px;
+    & h2 {
+        @include choice;
+        padding-top: 16px;
+    }
+    &-name{
+        @include photos;
+        position: relative;
+
+        & a{
+            text-decoration: none;
+            color: black;
+            margin-bottom: 0;
+        }
+        & img{
+            object-fit: cover;
+            width: 100%;
+            height: 160px;
+            border-radius: 18px 18px 0 0 ;
+        }
+        &_description{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-left: 10px;
+            & h3 {
+                font-weight: bold;
+                margin-bottom: 0px;
+                margin-top: 10px;
+            }
+            & p{
+                margin-top: 5px;
+            }
+        }
+        .far.fa-heart{
+            position: absolute;
+            top: 180px;
+            left: 80%;
+            font-size: 21px;
+            @include coeur;
+            text-rendering: optimizeLegibility;
+            @media  screen and (min-width:768px) {
+                margin-top: 30px;
+            } 
+        }   
+     }
+}
+
+@media  screen and (min-width:768px){
+    .restaurantcontainer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        & .restaurants-name{
+            width: 250px;
+        }  
+    }
+ }
+.restaurants-name_new{
+    @include new;
+}  
+
+
+
+/**pages menus des restaurants**/
+.photoplat{
+    margin: 0;
+    & img{
+        object-fit: cover;
+        width: 100%;
+        height: 250px;
+        @media  screen and (min-width:768px) {
+            height: 400px;
+        }
+    }
+}
+
+.restotitle{
+    @include title;
+    white-space: normal;
+    & h2 {
+        margin: 3px 0;
+        width: 80%;
+    }
+    & h1{
+        margin-bottom: 0px;
+    }
+}
+
+.menu {
+    @media  screen and (min-width:768px){
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+}
+.restomenu{
+    position: relative;
+    @include restomenu;
+    z-index: 2;
+    & h3{
+        font-size: 19px;
+        margin-bottom: 8px;
+        margin-top: 50px;
+        font-weight: 400;
+    }   
+}    
+
+.restocoeur{
+    margin-top: 40px;
+    .far.fa-heart{
+        @include coeur;
+    }
+}
+
+
+
+.trait {
+    border: 2px solid $colortertiary;
+    width: 48px;
+}
+.menutitle{
+    margin: 16px 16px 32px 16px;
+}
+.menu-plat{
+    @include menu-plat;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    height: 68px;
+    cursor: pointer;
+    &:active .validation {
+        animation: valid 2500ms both;
+        & .far.fa-check-circle {
+            animation: i-rotate 1500ms 500ms both;
+            text-rendering: optimizeLegibility;
+        }
+    }
+    @media screen and (min-width:768px){
+        width: 400px;
+    }
+    @media screen and (min-width:992px){
+        &:hover .validation {
+            animation: valid 2500ms both;
+            & .far.fa-check-circle {
+                animation: i-rotate 1500ms 500ms both;
+                text-rendering: optimizeLegibility;
+            }
+        }   
+    }
+}
+.validation
+{
+    display: flex;
+    flex-direction: row;
+    text-align: right;
+    justify-content: space-evenly;
+    margin-right: -67px;
+    position: relative;
+    z-index: 2;
+    & button:active {
+        animation: valid 2500ms both;
+        & .far.fa-check-circle {
+            animation: i-rotate 1500ms 500ms both;
+        }
+    }    
+}
+
+.menu-plat_name{
+    display: inline;
+    width: 100%;
+    max-width: 400px;
+    margin-top: 0;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    z-index: 1;
+    & h4 {
+        font-weight: bold;
+        font-size: 18px;
+        white-space: nowrap;
+        margin: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    & p{
+        font-size: 15px;
+        margin: 7px 0px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+.menu-plat_tarif {
+    font-weight: 800;
+    font-size: 16px;
+    margin-right: 20px;
+    padding-top: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: right;
+}
+.menu-plat_check {
+    border: 1px solid $colortertiary;
+    background-color: $colortertiary;
+    width: 65px;
+    margin-top: -25px;
+    padding-top: 25px;
+    font-size: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    & .far.fa-check-circle {
+        text-align: center;
+        color: $colortertiary;
+        background-color: white;
+        transform-origin: 50% 60%;
+        border-radius: 50%;
+    }
+}
+
+.arriveepage{
+    opacity: 1;
+    animation: apparitionprog 3000ms both;
+    & .menu-plat {
+        animation-delay: 500ms;
+    }
+}

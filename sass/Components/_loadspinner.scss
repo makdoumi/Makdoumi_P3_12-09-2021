@@ -1,0 +1,41 @@
+@keyframes load{
+    from {
+        transform:translateY(0px);
+    }
+    to {
+        transform:translateY(-9999px);
+    }
+}
+
+@keyframes spinner{
+    to {
+        transform: rotate(360deg);
+    }
+}
+.load {
+    width: 25vw;
+    height: 25vw;
+    @media screen and (min-width:992px){
+        width: 15vw;
+        height: 15vw;
+    }
+    display: inline-block;
+    border: 6px solid $colorprimary;
+    border-top-color: white;
+    border-radius: 50%;
+    margin-top: 40vh;
+    animation: spinner 3s ease-in-out infinite;
+    &_spinner{
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: white;
+        width: 100vw;
+        height: 100vh;
+        text-align: center;
+        animation: load 1ms 2s ease-in-out;
+        animation-fill-mode: both;
+        z-index: 1;
+
+    }
+}

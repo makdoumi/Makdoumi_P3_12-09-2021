@@ -1,0 +1,653 @@
+@keyframes anim-button {
+  0% {
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    opacity: 1;
+  }
+  100% {
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.35);
+    opacity: 0.9;
+  }
+}
+@keyframes valid {
+  0% {
+    margin-right: -67px;
+  }
+  100% {
+    margin-right: 0;
+  }
+}
+@keyframes i-rotate {
+  0% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes apparitionprog {
+  0% {
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: 100% 0%;
+  }
+  100% {
+    opacity: 1;
+    transform: scaleY(1);
+    transform-origin: 100% 0%;
+  }
+}
+html {
+  overflow-x: hidden;
+}
+
+body {
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+}
+
+section h1 {
+  font-family: "Shrikhand", "Arial", "sans-serif";
+}
+
+section h2, h3, h4, p {
+  font-family: "roboto", "Arial", "sans-serif";
+}
+
+h2 {
+  font-weight: bold;
+}
+
+p {
+  font-weight: normal;
+}
+
+.fas {
+  text-rendering: optimizeLegibility;
+}
+
+.btn {
+  color: #ffff;
+  text-decoration: none;
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  border-radius: 25px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: color 1s;
+  border-style: none;
+  padding: 16px 32px;
+  margin: 24px;
+  height: 48px;
+  outline: none;
+}
+.btn:hover {
+  animation: anim-button 0.3s both;
+  background: linear-gradient(#ff8de0, #9e67e0);
+}
+
+.command {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+@keyframes load {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-9999px);
+  }
+}
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.load {
+  width: 25vw;
+  height: 25vw;
+  display: inline-block;
+  border: 6px solid #9356DC;
+  border-top-color: white;
+  border-radius: 50%;
+  margin-top: 40vh;
+  animation: spinner 3s ease-in-out infinite;
+}
+@media screen and (min-width: 992px) {
+  .load {
+    width: 15vw;
+    height: 15vw;
+  }
+}
+.load_spinner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  animation: load 1ms 2s ease-in-out;
+  animation-fill-mode: both;
+  z-index: 1;
+}
+
+/**page accueil**/
+/**container localisation**/
+.localisation {
+  display: flex;
+  width: 100%;
+  background-color: #E2E2E2;
+  justify-content: center;
+  padding-bottom: 0.5em;
+}
+.localisation form {
+  flex-direction: row;
+  padding-top: 0.5em;
+  text-align: center;
+}
+.localisation input {
+  margin-left: 10px;
+  border: none;
+  background-color: #E2E2E2;
+}
+.localisation i {
+  display: inline-flex;
+  padding-top: 10px;
+  margin-left: 25px;
+}
+
+.placeholder {
+  font-weight: bold;
+  color: black;
+}
+
+/**container presentation**/
+.presentation {
+  background-color: #F6F6F6;
+  text-align: center;
+  font-weight: bold;
+}
+.presentation p {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 0px;
+}
+.presentation h2 {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+/**container fonctionnement**/
+.fonctionnement {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 16px;
+  margin-left: 13px;
+}
+@media screen and (min-width: 768px) {
+  .fonctionnement {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+.fonctionnement h2 {
+  font-size: 21px;
+  font-weight: bold;
+  margin: 16px 16px 8px 16px;
+}
+@media screen and (min-width: 768px) {
+  .fonctionnement h2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+.fonctionnement span {
+  color: #ffffff;
+  border: 0 solid #9356DC;
+  border-radius: 150%;
+  background-color: #9356DC;
+  text-align: center;
+  padding: 6px 11px;
+  margin: 0 16px 0 -32px;
+}
+.fonctionnement p {
+  justify-content: center;
+  font-size: 16px;
+  font-weight: bold;
+  border: 1px solid #F4F4F5;
+  border-radius: 20px;
+  box-shadow: 2px 2px 8px 2px #AFAFB1;
+  background-color: #F6F6F6;
+  margin: 16px;
+  padding: 16px;
+  cursor: pointer;
+}
+.fonctionnement p:hover {
+  background-color: #f5edff;
+}
+.fonctionnement p:hover i {
+  color: #9356DC;
+}
+.fonctionnement p i {
+  padding-right: 16px;
+  color: #7e7e7e;
+  font-size: 19px;
+}
+
+/**container restaurants**/
+.restaurants {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 40px;
+  background-color: #F6F6F6;
+  margin-top: 30px;
+}
+.restaurants h2 {
+  font-size: 21px;
+  font-weight: bold;
+  margin: 16px 16px 8px 16px;
+  padding-top: 16px;
+}
+.restaurants-name {
+  justify-content: center;
+  border: 0 white solid;
+  border-radius: 20px;
+  background-color: #ffffff;
+  margin: 16px;
+  height: auto;
+  box-shadow: 2px 2px 8px 2px #AFAFB1;
+  position: relative;
+}
+.restaurants-name a {
+  text-decoration: none;
+  color: black;
+  margin-bottom: 0;
+}
+.restaurants-name img {
+  object-fit: cover;
+  width: 100%;
+  height: 160px;
+  border-radius: 18px 18px 0 0;
+}
+.restaurants-name_description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 10px;
+}
+.restaurants-name_description h3 {
+  font-weight: bold;
+  margin-bottom: 0px;
+  margin-top: 10px;
+}
+.restaurants-name_description p {
+  margin-top: 5px;
+}
+.restaurants-name .far.fa-heart {
+  position: absolute;
+  top: 180px;
+  left: 80%;
+  font-size: 21px;
+  color: black;
+  cursor: pointer;
+  font-weight: bold;
+  background-size: auto 0%;
+  background-repeat: no-repeat;
+  -webkit-text-stroke-width: 1px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 600ms;
+  text-rendering: optimizeLegibility;
+}
+.restaurants-name .far.fa-heart:hover {
+  color: -webkit-linear-gradient(235deg, #9356DC, #FF79DA);
+  background: -webkit-linear-gradient(235deg, #9356DC, #FF79DA);
+  color: #5f5f5f;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  -webkit-text-stroke-width: thin;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+@media screen and (min-width: 768px) {
+  .restaurants-name .far.fa-heart {
+    margin-top: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .restaurantcontainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+  }
+  .restaurantcontainer .restaurants-name {
+    width: 250px;
+  }
+}
+.restaurants-name_new {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  background-color: #99E2D0;
+  border: 1px solid #99E2D0;
+  border-radius: 3px;
+  font-weight: bold;
+  text-align: center;
+  color: #28967c;
+  padding: 3px 8px 3px 8px;
+}
+
+/**pages menus des restaurants**/
+.photoplat {
+  margin: 0;
+}
+.photoplat img {
+  object-fit: cover;
+  width: 100%;
+  height: 250px;
+}
+@media screen and (min-width: 768px) {
+  .photoplat img {
+    height: 400px;
+  }
+}
+
+.restotitle {
+  font-family: "shrikhand", "Arial", "sans-serif";
+  font-size: 28px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0px 16px 0px 16px;
+  white-space: normal;
+}
+.restotitle h2 {
+  margin: 3px 0;
+  width: 80%;
+}
+.restotitle h1 {
+  margin-bottom: 0px;
+}
+
+@media screen and (min-width: 768px) {
+  .menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+
+.restomenu {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #F4F4F5;
+  border-radius: 30px 30px 0 0;
+  background-color: #F4F4F5;
+  margin: -48px 0px 0px 0px;
+  z-index: 2;
+}
+.restomenu h3 {
+  font-size: 19px;
+  margin-bottom: 8px;
+  margin-top: 50px;
+  font-weight: 400;
+}
+
+.restocoeur {
+  margin-top: 40px;
+}
+.restocoeur .far.fa-heart {
+  color: black;
+  cursor: pointer;
+  font-weight: bold;
+  background-size: auto 0%;
+  background-repeat: no-repeat;
+  -webkit-text-stroke-width: 1px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 600ms;
+}
+.restocoeur .far.fa-heart:hover {
+  color: -webkit-linear-gradient(235deg, #9356DC, #FF79DA);
+  background: -webkit-linear-gradient(235deg, #9356DC, #FF79DA);
+  color: #5f5f5f;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  -webkit-text-stroke-width: thin;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.trait {
+  border: 2px solid #99E2D0;
+  width: 48px;
+}
+
+.menutitle {
+  margin: 16px 16px 32px 16px;
+}
+
+.menu-plat {
+  border: 0 solid white;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 2px 2px 8px 2px #AFAFB1;
+  margin: 16px 0px 0px 0px;
+  padding: 13px 0 0 13px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  height: 68px;
+  cursor: pointer;
+}
+.menu-plat:active .validation {
+  animation: valid 2500ms both;
+}
+.menu-plat:active .validation .far.fa-check-circle {
+  animation: i-rotate 1500ms 500ms both;
+  text-rendering: optimizeLegibility;
+}
+@media screen and (min-width: 768px) {
+  .menu-plat {
+    width: 400px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .menu-plat:hover .validation {
+    animation: valid 2500ms both;
+  }
+  .menu-plat:hover .validation .far.fa-check-circle {
+    animation: i-rotate 1500ms 500ms both;
+    text-rendering: optimizeLegibility;
+  }
+}
+
+.validation {
+  display: flex;
+  flex-direction: row;
+  text-align: right;
+  justify-content: space-evenly;
+  margin-right: -67px;
+  position: relative;
+  z-index: 2;
+}
+.validation button:active {
+  animation: valid 2500ms both;
+}
+.validation button:active .far.fa-check-circle {
+  animation: i-rotate 1500ms 500ms both;
+}
+
+.menu-plat_name {
+  display: inline;
+  width: 100%;
+  max-width: 400px;
+  margin-top: 0;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  z-index: 1;
+}
+.menu-plat_name h4 {
+  font-weight: bold;
+  font-size: 18px;
+  white-space: nowrap;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu-plat_name p {
+  font-size: 15px;
+  margin: 7px 0px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.menu-plat_tarif {
+  font-weight: 800;
+  font-size: 16px;
+  margin-right: 20px;
+  padding-top: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: right;
+}
+
+.menu-plat_check {
+  border: 1px solid #99E2D0;
+  background-color: #99E2D0;
+  width: 65px;
+  margin-top: -25px;
+  padding-top: 25px;
+  font-size: 30px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.menu-plat_check .far.fa-check-circle {
+  text-align: center;
+  color: #99E2D0;
+  background-color: white;
+  transform-origin: 50% 60%;
+  border-radius: 50%;
+}
+
+.arriveepage {
+  opacity: 1;
+  animation: apparitionprog 3000ms both;
+}
+.arriveepage .menu-plat {
+  animation-delay: 500ms;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #353535;
+  padding-bottom: 20px;
+}
+footer a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: normal;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 768px) {
+  footer a {
+    display: flex;
+    justify-content: center;
+  }
+}
+footer h5 {
+  color: white;
+  font-family: "Shrikhand", "Arial", "sans-serif";
+  margin-left: 15px;
+  font-weight: normal;
+}
+@media screen and (min-width: 768px) {
+  footer h5 {
+    display: flex;
+    justify-content: center;
+  }
+}
+footer .fas {
+  margin-right: 10px;
+  margin-left: 0px;
+}
+footer .far {
+  margin-right: 10px;
+  margin-left: 0px;
+}
+
+/**header accueil**/
+header h1 {
+  height: 30px;
+  text-align: center;
+  font-family: "Shrikhand", "Arial", "sans-serif";
+  font-weight: normal;
+}
+
+/**header pages menus resto**/
+.headerresto {
+  display: block;
+  text-align: start;
+}
+.headerresto a {
+  cursor: pointer;
+}
+.headerresto i {
+  display: inline-block;
+  position: absolute;
+  text-align: start;
+  font-weight: 900;
+  font-size: 24px;
+  margin-left: 20px;
+  color: black;
+}
+
+.headerlogo {
+  display: block;
+  text-align: center;
+}
+.headerlogo h1 {
+  height: 30px;
+  font-size: 30px;
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .restaurant {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .fonctionnement {
+    display: flex;
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .restaurant {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

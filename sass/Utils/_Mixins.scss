@@ -1,0 +1,115 @@
+@mixin button ($color: $colorsecondary) {
+    background-image: $colorbutton;
+    border-radius: 25px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 1s;
+    border-style: none;
+    padding: 16px 32px;
+    margin: 24px;
+    height: 48px;
+}
+
+@mixin choice {
+    font-size: 21px;
+    font-weight: bold;
+    margin: 16px 16px 8px 16px;
+}
+@mixin number {
+    color: #ffffff;
+    border: 0 solid $colorprimary;
+    border-radius: 150%;
+    background-color: $colorprimary;
+    text-align: center;
+    padding: 6px 11px;
+    margin: 0 16px 0 -32px;
+}
+
+@mixin borderradius ($color: $colorborderradius){
+    border: 1px solid $color;
+    border-radius: 20px;
+    box-shadow: 2px 2px 8px 2px #AFAFB1;
+    background-color: $colorfond;
+}
+
+
+
+@mixin photos{
+    justify-content: center;
+    border: 0 white solid;
+    border-radius: 20px;
+    background-color: #ffffff;
+    margin: 16px;
+    height: auto;
+    box-shadow: 2px 2px 8px 2px #AFAFB1;
+}
+
+@mixin new{
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    background-color: $colortertiary;
+    border: 1px solid $colortertiary;
+    border-radius: 3px;
+    font-weight: bold;
+    text-align: center;
+    color: #28967c;
+    padding: 3px 8px 3px 8px;
+}
+
+@mixin title{
+    font-family: 'shrikhand', 'Arial', 'sans-serif';
+    font-size: 28px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0px 16px 0px 16px;
+    
+}
+
+@mixin restomenu{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid $colorborderradius;
+    border-radius: 30px 30px 0 0;
+    background-color: $colorborderradius;
+    margin: -48px 0px 0px 0px;
+}
+
+@mixin menu-plat{
+    border: 0 solid white;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 2px 2px 8px 2px #AFAFB1;
+    margin: 16px 0px 0px 0px;
+    padding: 13px 0 0 13px;
+}
+
+
+
+
+
+@mixin coeur {
+   color: black;
+   cursor: pointer;
+   font-weight: bold;
+   background-size: auto 0%;
+   background-repeat: no-repeat;
+   -webkit-text-stroke-width: 1px;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   transition: all 600ms;
+    &:hover{
+        color: -webkit-linear-gradient(235deg,$colorprimary,$colorsecondary);
+        background:  -webkit-linear-gradient(235deg,$colorprimary,$colorsecondary);
+        color: #5f5f5f;
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        -webkit-text-stroke-width: thin;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+
+    }
+}

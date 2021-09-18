@@ -1,0 +1,18 @@
+
+.btn
+{
+    color: #ffff;
+    text-decoration: none;
+    @include button;
+    outline: none;
+    &:hover
+    {
+        animation: anim-button 0.3s both;
+        background: linear-gradient(lighten($colorsecondary, 4), lighten($colorprimary, 4));
+    }
+}  
+
+.command{
+    text-align: center;
+    margin-bottom: 40px;
+}

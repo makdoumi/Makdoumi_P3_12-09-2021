@@ -1,0 +1,35 @@
+/**header accueil**/
+header h1{
+    height: 30px;
+    text-align: center;
+    font-family: 'Shrikhand', 'Arial', 'sans-serif';
+    font-weight: normal;
+}
+
+
+/**header pages menus resto**/
+.headerresto{
+    display: block;
+    text-align: start;
+    & a{
+        cursor: pointer;
+    }
+    & i{
+        display: inline-block;
+        position: absolute;
+        text-align: start;
+        font-weight: 900;
+        font-size: 24px;
+        margin-left: 20px;
+        color: black;
+    }
+   
+}
+.headerlogo{
+    display: block;
+        text-align: center;
+    & h1{
+        height: 30px;
+        font-size: 30px;
+    }    
+}

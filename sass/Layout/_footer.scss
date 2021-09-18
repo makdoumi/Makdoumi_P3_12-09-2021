@@ -1,0 +1,36 @@
+footer{
+    display: flex;
+    flex-direction: column;
+    background-color: #353535;
+    padding-bottom: 20px;
+    & a{
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: normal;
+        margin-left: 10px;
+        margin-bottom: 10px;
+        @media  screen and (min-width:768px){
+            display: flex;
+            justify-content: center;
+        }
+    }
+   & h5{
+       color: white;
+       font-family: 'Shrikhand', 'Arial', 'sans-serif';
+       margin-left: 15px;
+       font-weight: normal;
+       @media  screen and (min-width:768px) {
+        display: flex;
+        justify-content: center;
+       }
+   }
+   .fas{
+       margin-right: 10px;
+       margin-left: 0px;
+   }
+   .far{
+       margin-right: 10px;
+       margin-left: 0px;
+   }
+}
+
